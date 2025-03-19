@@ -303,6 +303,20 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+                    @session('success')
+                        <div class="alert alert-success" role="alert">
+                            <strong>{{ __('Success:') }} </strong> {{ session('success') }}
+                        </div>
+                    @endsession
+
+                    @session('error')
+                        <div class="alert alert-danger" role="alert">
+                            <strong>{{ __('Error:') }} </strong> {{ session('error') }}
+                        </div>
+                    @endsession
+
+
+
                     @yield('main-content')
 
                 </div>

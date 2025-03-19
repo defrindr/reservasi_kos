@@ -19,7 +19,8 @@ return new class extends Migration
             $table->date('check_out');
             $table->integer('total_price');
             $table->string('transfer_photo')->nullable();
-            $table->enum('status', ['pending', 'menunggu pembayaran', 'selesai', 'dibatalkan']);
+            $table->enum('status', ['pending', 'menunggu pembayaran', 'konfirmasi pembayaran', 'selesai', 'dibatalkan', 'ditolak']);
+            $table->text('komentar');
             $table->softDeletes();
             $table->timestamps();
         });

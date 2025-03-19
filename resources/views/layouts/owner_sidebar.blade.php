@@ -22,3 +22,18 @@
         <span>{{ __('Penyewa') }}</span>
     </a>
 </li>
+
+
+<!-- Nav Item - Dashboard -->
+{{-- <li class="nav-item {{ Nav::isRoute('transaksi.list-kamar') }}">
+    <a class="nav-link" href="{{ route('transaksi.list-kamar') }}">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>{{ __('Daftar Kamar') }}</span></a>
+</li> --}}
+
+<!-- Nav Item - Dashboard -->
+<li class="nav-item {{ Nav::isRoute('transaksi.index') }}">
+    <a class="nav-link" href="{{ route('transaksi.index') }}">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>{{ __('Daftar Transaksi') }}</span></a>
+</li>
