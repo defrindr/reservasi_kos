@@ -1,84 +1,41 @@
-# Laravel SB Admin 2
+# Reservasi Kos
 
-SB Admin 2 for Laravel.
+## Instalasi
 
-| Laravel Version | Branch | Support     |
-|-----------------|--------|-------------|
-| 12.0            | main   |             |
-| 11.0            | v11.0  |             |
-| 10.0            | v10.0  | End of life |
-| 9.0             | v9.0   | End of life |
-| 8.0             | v8.0   | End of life |
+1. clone project
+   ```sh
+   git clone https://github.com/defrindr/reservasi_kos.git
+   ```
+2. install composer
+   ```sh
+   composer install
+   ```
+3. buat database baru dari phpmyadmin
+4. copy paste file .env.example ke .env
+   ```sh
+   cp .env.example .env
+   ```
+5. atur database di .env file
+6. generate key
+   ```sh
+   php artisan key:generate
+   ```
+7. Storage link
+   ```sh
+   php artisan storage:link
+   ```
+8. jalankan migration
+   ```sh
+   php artisan migrate:fresh --seed
+   ```
+9.  jalankan project
+   ```sh
+   php artisan serve
+   ```
 
-## Requirements
+## Akun
 
-- PHP >= 8.2
-- Ctype PHP Extension
-- cURL PHP Extension
-- DOM PHP Extension
-- Fileinfo PHP Extension
-- Filter PHP Extension
-- Hash PHP Extension
-- Mbstring PHP Extension
-- OpenSSL PHP Extension
-- PCRE PHP Extension
-- PDO PHP Extension
-- Session PHP Extension
-- Tokenizer PHP Extension
-- XML PHP Extension
-
-## Installation
-
-- Clone the repo and `cd` into it
-- Run `composer install`
-- Rename or copy `.env.example` file to `.env`
-- Run `php artisan key:generate`
-- Set your database credentials in your `.env` file
-
-## Note
-
-Recommend to install this preset on a project that you are starting from scratch, otherwise your project's design might break.
-
-If you found this project useful, then please consider giving it a :star:
-
-## Credits
-
-Laravel SB Admin 2 uses some open-source third-party libraries/packages, many thanks to the web community.
-
-- Laravel - Open source framework.
-- LaravelEasyNav - Making managing navigation in Laravel easy.
-- SB Admin 2 - Thanks to Start Bootstrap.
-
-## Preview
-
-`login`
-
-<img src="https://imgur.com/YjGp6Sbl.png">
-
-***
-
-`register`
-
-<img src="https://imgur.com/Wj09cu4l.png">
-
-***
-
-`dashboard`
-
-<img src="https://imgur.com/CrmOfT5l.png">
-
-***
-
-`profile`
-
-<img src="https://imgur.com/5t4eS1rl.png">
-
-***
-
-`logout`
-
-<img src="https://imgur.com/d9JclOYl.png">
-
-## License
-
-Licensed under the [MIT](LICENSE) license.
+| Role    | Email             | Password |
+| ------- | ----------------- | -------- |
+| Penyewa | penyewa@gmail.com | password |
+| Admin   | test@example.com  | password |
