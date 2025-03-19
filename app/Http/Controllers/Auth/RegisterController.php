@@ -73,7 +73,7 @@ class RegisterController extends Controller
                 'last_name' => '-',
                 'email' => $data['email'],
                 'password' => $data['password'],
-                'role' => 'penyewa',
+                'role' => 'user',
             ]);
 
             $createPenyewa = $createUser->penyewa()->create([
