@@ -32,7 +32,11 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="last_name" placeholder="{{ __('Last Name') }}" value="{{ old('last_name') }}" required>
+                                        <input type="text" class="form-control form-control-user" name="address" placeholder="{{ __('Address') }}" value="{{ old('address') }}" required autofocus>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" name="phone_number" placeholder="{{ __('Phone Number') }}" value="{{ old('phone_number') }}" required autofocus>
                                     </div>
 
                                     <div class="form-group">

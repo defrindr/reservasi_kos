@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Penyewa extends Model
 {
     protected $fillable = [
-        'nama',
+        'name',
         'address',
         'phone_number'
     ];
