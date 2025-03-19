@@ -53,19 +53,19 @@ class KamarKosController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(KamarKos $kamar_ko)
+    public function edit($id)
     {
-        $page = $kamar_ko;
+        $page = $this->service->show($id);
         return view('kamar-kos.edit', compact('page'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, KamarKos $kamar_ko)
+    public function update(Request $request, $id)
     {
-        $page = $kamar_ko;
         try {
+            $page = $this->service->show($id);
             $success = $this->service->update($request->all(), $page->id);
             if (!$success) {
                 return redirect()->back()->with('error', 'Failed to update data');
@@ -79,10 +79,10 @@ class KamarKosController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(KamarKos $kamar_ko)
+    public function destroy($id)
     {
-        $page = $kamar_ko;
         try {
+            $page = $this->service->show($id);
             $success = $this->service->destroy($page->id);
             if (!$success) {
                 return redirect()->back()->with('error', 'Failed to delete data');

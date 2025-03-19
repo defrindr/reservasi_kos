@@ -1,14 +1,14 @@
 @extends('layouts.admin')
-@section('title', 'Kamar Kos')
+@section('title', 'Penyewa')
 
 @section('main-content')
     <div class="row">
         <div class="col-md-12 mt-2">
             <div class="card card-primary">
                 <div class="card-header">
-                    <i class="fas fa-home"></i> Kamar Kos
+                    <i class="fas fa-home"></i> Penyewa
                     <div class="float-right">
-                        <a href="{{ route('kamar-kos.create') }}" class="btn btn-success">
+                        <a href="{{ route('penyewa.create') }}" class="btn btn-success">
                             <i class="fas fa-plus"></i> Tambah
                         </a>
                     </div>
@@ -19,9 +19,8 @@
                             <thead>
                                 <th>NO</th>
                                 <th>Nama</th>
-                                <th>Deskripsi</th>
-                                <th>Harga</th>
-                                <th>Available</th>
+                                <th>Alamat</th>
+                                <th>No HP</th>
                                 <th>ACTION</th>
                             </thead>
                             <tbody>
@@ -36,16 +35,15 @@
                                             {{ $loop->index + 1 + ($pages->currentPage() - 1) * $pages->perPage() }}
                                         </td>
                                         <td>{{ $page->name }}</td>
-                                        <td>{{ $page->description }}</td>
-                                        <td>{{ $page->price }}</td>
-                                        <td>{{ $page->available ? 'Ya' : 'Tidak' }}</td>
+                                        <td>{{ $page->address }}</td>
+                                        <td>{{ $page->phone_number }}</td>
 
                                         <td>
-                                            <a href="{{ route('kamar-kos.edit', $page) }}"
+                                            <a href="{{ route('penyewa.edit', $page) }}"
                                                 class="btn btn-warning btn-sm mt-1 mr-1">
                                                 <i class="fas fa-pencil-alt"></i>
                                             </a>
-                                            <form class="d-inline" action="{{ route('kamar-kos.destroy', $page) }}"
+                                            <form class="d-inline" action="{{ route('penyewa.destroy', $page) }}"
                                                 method="post">
                                                 @csrf
                                                 @method('DELETE')

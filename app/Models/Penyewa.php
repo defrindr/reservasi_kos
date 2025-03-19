@@ -9,6 +9,12 @@ class Penyewa extends Model
     protected $fillable = [
         'name',
         'address',
-        'phone_number'
+        'phone_number',
+        'user_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

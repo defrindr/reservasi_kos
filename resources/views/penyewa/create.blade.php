@@ -1,23 +1,22 @@
 @extends('layouts.admin')
-@section('title', 'Kamar Kos')
+@section('title', 'Penyewa')
 
 @section('main-content')
     <div class="row">
         <div class="col-md-12 mt-2">
             <div class="card card-primary">
                 <div class="card-header">
-                    <i class="fas fa-home"></i> Create Kamar Kos
+                    <i class="fas fa-home"></i> Create Penyewa
                     <div class="float-right">
-                        <a href="{{ route('kamar-kos.index') }}" class="btn btn-secondary">
+                        <a href="{{ route('penyewa.index') }}" class="btn btn-secondary">
                             <i class="fas fa-arrow-left"></i> Kembali
                         </a>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('kamar-kos.update', $page) }}" method="post">
+                    <form action="{{ route('penyewa.store') }}" method="post">
                         @csrf
-                        @method('PUT')
-                        @include('kamar-kos.form')
+                        @include('penyewa.form')
                         <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
             </div>

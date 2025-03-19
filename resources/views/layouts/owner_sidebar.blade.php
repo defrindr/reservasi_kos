@@ -13,3 +13,12 @@
         <span>{{ __('Kamar Kos') }}</span>
     </a>
 </li>
+
+
+<!-- Nav Item - Profile -->
+<li class="nav-item {{ Nav::isRoute('penyewa') }}">
+    <a class="nav-link" href="{{ route('penyewa.index') }}">
+        <i class="fas fa-fw fa-user"></i>
+        <span>{{ __('Penyewa') }}</span>
+    </a>
+</li>

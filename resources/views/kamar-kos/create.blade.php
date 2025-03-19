@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'List User - MPMK')
+@section('title', 'Kamar Kos')
 
 @section('main-content')
     <div class="row">
